@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-	// 전송 데이터 수신
+// 전송 데이터 수신
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String auto = request.getParameter("auto");
@@ -22,11 +22,11 @@
 		
 		// 자동 로그인 처리
 		if(auto != null) {
-			Cookie autoCookie = new Cookie("auto", id);
-			autoCookie.setMaxAge(60 * 60 * 24 * 7);
-			autoCookie.setPath("/");
-			
-			response.addCookie(autoCookie);		
+	Cookie autoCookie = new Cookie("auto", id);
+	autoCookie.setMaxAge(60 * 60 * 24 * 7);
+	autoCookie.setPath("/");
+	
+	response.addCookie(autoCookie);		
 		}
 		
 		// 사용자가 회원이면 세션에 사용자 객체 저장

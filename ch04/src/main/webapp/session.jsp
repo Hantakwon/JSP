@@ -2,25 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%@ page import='vo.UserVO'%>
 <%
-	// 자동 로그인 여부 확인
+// 자동 로그인 여부 확인
 	Cookie[] cookies = request.getCookies();
 	
 	if (cookies != null) {
 		for (Cookie cookie : cookies) {
-			if (cookie.getName().equals("auto")) {
-			String id = cookie.getValue();
+	if (cookie.getName().equals("auto")) {
+	String id = cookie.getValue();
 		
-			// 사용자 객체 생성
-			UserVO userVO = new UserVO();
-			userVO.setId(id);
-			
-			// 세션 처리
-			session.setAttribute("user", userVO);
+	// 사용자 객체 생성
+	UserVO userVO = new UserVO();
+	userVO.setId(id);
+	
+	// 세션 처리
+	session.setAttribute("user", userVO);
 		
-			// 로그인 성공 페이지 이동
-			response.sendRedirect("./proc/sessionSuccess.jsp");
-			return; // 처리종료
-			}
+	// 로그인 성공 페이지 이동
+	response.sendRedirect("./proc/sessionSuccess.jsp");
+	return; // 처리종료
+	}
 		}
 	}
 %>
@@ -30,7 +30,7 @@
 <meta charset="UTF-8">
 <title>session</title>
 <!-- 
-		날짜 : 2025/07/28
+		날짜 : 2025/07/29
 		이름 : 한탁원
 		내용 : JSP 세션 실습하기
 	 -->

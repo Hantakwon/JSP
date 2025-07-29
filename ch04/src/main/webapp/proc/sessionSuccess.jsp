@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="vo.UserVO"%>
 <%
-	UserVO user = (UserVO) session.getAttribute("user");
+UserVO user = (UserVO) session.getAttribute("user");
 	// 로그인 하지 않고 접근하면 로그인 화면 이동
 	if (user == null) {
 		response.sendRedirect("../session.jsp");
