@@ -15,4 +15,4 @@
 		application 값 : <%= application.getAttribute("name") %>
 	</p>
 </body>
-</html>s
+</html>

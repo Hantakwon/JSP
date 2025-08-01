@@ -28,7 +28,7 @@
 		성별 : <%= gender.equals("M") ? "남자" : "여자" %>  <br>
 		주소 : <%= address %> <br>
 		취미 : <% for(String hobby : hobbies) {%>
-				<%= hobby %> </p>
+				<%= hobby %> 
 				<%} %>
 	</p>
 	<a href="../1_request.jsp">뒤로가기</a>
