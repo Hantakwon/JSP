@@ -35,9 +35,9 @@ public class ModifyController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id = req.getParameter("id");
-		String name = req.getParameter("gender");
+		String name = req.getParameter("name");
 		int age = Integer.parseInt(req.getParameter("age"));
-		String email = req.getParameter("address");
+		String email = req.getParameter("email");
 		
 		// 서비스 전달을 위해 DTO 생성
 		User7DTO dto = new User7DTO();

@@ -148,7 +148,7 @@ public class User7DAO {
 	public void deleteUser7(String id) {
 		Connection conn = DBConnection();
 		
-		String sql = "DELETE FROM USER6 WHERE ID = ?";
+		String sql = "DELETE FROM USER7 WHERE ID = ?";
 		PreparedStatement psmt;
 		try {
 			psmt = conn.prepareStatement(sql);
