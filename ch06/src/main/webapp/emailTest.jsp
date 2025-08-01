@@ -26,7 +26,7 @@
 	<form action="/ch06/proc/emailSend.jsp" method="POST">
 		<table border="1">
 			<tr>
-				<td>보내는 사람</ㅉtd>
+				<td>보내는 사람</td>
 				<td><input type="text" name="sender" placeholder="보내는 사람 이메일 입력" required/></td>
 			</tr>
 			<tr>
