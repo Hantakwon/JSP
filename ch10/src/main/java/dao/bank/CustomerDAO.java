@@ -116,8 +116,8 @@ public class CustomerDAO extends DBHelper{
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getC_name());
-			psmt.setString(2, dto.getC_name());
-			psmt.setInt(3, dto.getC_type());
+			psmt.setInt(2, dto.getC_type());
+			psmt.setString(3, dto.getC_hp());
 			psmt.setString(4, dto.getC_addr());
 			psmt.setString(5, dto.getC_id());
 			

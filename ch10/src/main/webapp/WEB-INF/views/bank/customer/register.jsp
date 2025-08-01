@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bank/account::register</title>
+<title>Bank/Customer::register</title>
 </head>
 <body>
-	<h3>Bank/account 등록</h3>
+	<h3>Bank/Customer 등록</h3>
 	
 	<a href="/ch10">처음으로</a>
-	<a href="/ch10/bank/account/list.do">목록으로</a>
+	<a href="/ch10/bank/customer/list.do">목록으로</a>
 	
-	<form action="/ch10/bank/account/register.do" method="POST">
+	<form action="/ch10/bank/customer/register.do" method="POST">
 		<table border="1">
 			<tr>
 				<td>아이디</td>

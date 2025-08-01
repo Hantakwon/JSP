@@ -30,9 +30,7 @@ public class ModifyController extends HttpServlet {
 		String c_id = request.getParameter("c_id");
 		
 		CustomerDTO customer = service.findById(c_id);
-		
-		System.out.println(customer);
-		
+	
 		request.setAttribute("customer", customer);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/bank/customer/modify.jsp");

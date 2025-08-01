@@ -1,4 +1,4 @@
-package controller.bank.customer;
+package controller.library.book;
 
 import java.io.IOException;
 
@@ -7,24 +7,24 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import service.bank.CustomerService;
+import service.library.BookService;
 
-@WebServlet("/bank/customer/delete.do")
+@WebServlet("/library/book/delete.do")
 public class DeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-	private CustomerService service = CustomerService.INSTANCE;
+	private BookService service = BookService.INSTANCE;
 	
     public DeleteController() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String c_id = request.getParameter("c_id");
-	
-		service.delete(c_id);
+		String book_id = request.getParameter("book_id");
 		
-		response.sendRedirect("/ch10/bank/customer/list.do");
+		service.delete(Integer.parseInt(book_id));
+		
+		response.sendRedirect("/ch10/library/book/list.do");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
